@@ -27,7 +27,7 @@ O TP-Link é responsável pela distribuição do sinal Wi-Fi aos dispositivos se
 
 Por fim, a interface WAN do pfSense fornece conectividade com a internet.
 
-[Topologia da rede](Topologia/Topologia.png)
+![Topologia da rede](Topologia/Topologia.png)
 
 ## Tecnologias Utilizadas
 
@@ -68,11 +68,11 @@ O modo Bridge foi utilizado para que o pfSense operasse como um dispositivo de r
 
 A segunda interface foi associada à placa de rede USB Ethernet, sendo configurada como LAN, onde foi conectado o ponto de acesso TP-Link.
 
-[Configuração das placas de rede no virtualbox](prints/VirtualBox/Config_rede_pfSense_virtualbox.png)
+![Configuração das placas de rede no virtualbox](prints/VirtualBox/Config_rede_pfSense_virtualbox.png)
 
-[tplink wr849n utilizado como AP](hardware/Roteador_TPlink-wr829n.jpeg)
+![tplink wr849n utilizado como AP](hardware/Roteador_TPlink-wr829n.jpeg)
 
-[Placa de rede usb conectada ao tplink](hardware/Placa_de_rede_usb.jpeg)
+![Placa de rede usb conectada ao tplink](hardware/Placa_de_rede_usb.jpeg)
 
 
 ### Software

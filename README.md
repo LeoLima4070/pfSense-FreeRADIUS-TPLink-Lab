@@ -19,7 +19,15 @@ O objetivo é validar o processo de autenticação de usuários por meio de cred
 
 ## Topologia
 
+A topologia do laboratório é composta pelo pfSense atuando como roteador principal da rede, responsável pelo gerenciamento da LAN, fornecimento de DHCP e integração com um servidor RADIUS previamente configurado.
 
+A rede LAN 192.168.1.0/24 é utilizada como segmento principal, onde o ponto de acesso TP-Link, configurado em modo Access Point e com endereço IP estático 192.168.1.4, atua como cliente RADIUS.
+
+O TP-Link é responsável pela distribuição do sinal Wi-Fi aos dispositivos sem fio, enquanto a autenticação dos usuários é centralizada no pfSense por meio do serviço RADIUS, garantindo controle de acesso à rede.
+
+Por fim, a interface WAN do pfSense fornece conectividade com a internet.
+
+[Topologia da rede](Topologia/Topologia.png)
 
 ## Tecnologias Utilizadas
 
@@ -37,10 +45,13 @@ O objetivo é validar o processo de autenticação de usuários por meio de cred
 3. O FreeRADIUS recebe as credenciais.
 4. O servidor valida usuário e senha.
 5. O acesso é concedido ou negado.
+6. Se concedido o cliente recebe um IP distribuído pelo pfSense via DHCP
 
 ---
 
-## Ambiente de Testes
+## Configurações
+
+
 
 ### Hardware
 
@@ -48,23 +59,31 @@ O objetivo é validar o processo de autenticação de usuários por meio de cred
 * Adaptador USB Wi-Fi
 * Notebook utilizado como plataforma de laboratório
 
+
+O hardware físico utilizado neste projeto consiste em um notebook com uma interface de rede Ethernet (RJ-45) integrada, além de uma placa de rede USB Ethernet adicional.
+
+No VirtualBox, a máquina virtual do pfSense foi configurada com duas interfaces de rede em modo bridge. A primeira interface foi associada à placa de rede integrada do notebook, sendo configurada como WAN, responsável pelo acesso à internet.
+
+O modo Bridge foi utilizado para que o pfSense operasse como um dispositivo de rede real, integrado diretamente à infraestrutura física, permitindo comunicação direta com o ponto de acesso TP-Link e demais dispositivos da rede, simulando um ambiente de produção.
+
+A segunda interface foi associada à placa de rede USB Ethernet, sendo configurada como LAN, onde foi conectado o ponto de acesso TP-Link.
+
+[Configuração das placas de rede no virtualbox](prints/VirtualBox/Config_rede_pfSense_virtualbox.png)
+
+[tplink wr849n utilizado como AP](hardware/Roteador_TPlink-wr829n.jpeg)
+
+[Placa de rede usb conectada ao tplink](hardware/Placa_de_rede_usb.jpeg)
+
+
 ### Software
 
 * pfSense
 * FreeRADIUS
 
+## Testes
 
-## Evidências
 
-As capturas de tela incluídas neste repositório demonstram:
 
-* Configuração do FreeRADIUS no pfSense
-* Cadastro de usuários
-* Configuração WPA2-Enterprise no Access Point
-* Integração do cliente RADIUS
-* Conexão bem-sucedida à rede Wi-Fi
-
-Também são disponibilizadas fotografias do ambiente físico utilizado durante os testes.
 
 ## Resultados
 

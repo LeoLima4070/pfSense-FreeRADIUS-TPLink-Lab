@@ -27,6 +27,8 @@ O TP-Link é responsável pela distribuição do sinal Wi-Fi aos dispositivos se
 
 Por fim, a interface WAN do pfSense fornece conectividade com a internet.
 
+Figura 1 – Topologia da rede do laboratório
+
 ![Topologia da rede](Topologia/Topologia.png)
 
 ## Tecnologias Utilizadas
@@ -85,11 +87,19 @@ A porta **1812/UDP** é utilizada pelo protocolo RADIUS para autenticação e su
 6. O Access Point concede ou bloqueia o acesso à rede de acordo com a resposta recebida.
 
 
+Figura 2 – Configuração de rede pfSense
+
 ![Configuração de rede pfSense](prints/pfSense/Config_rede_pfSense.png)
+
+Figura 3 - Configuração do servidor freeRADIUS
 
 ![Configuração servidor freeRADIUS](prints/pfSense/Servidor_freeradius_pfSense.png)
 
+Figura 4 - Configuração do tplink como cliente FreeRADIUS
+
 ![Configuração cliente freeRADIUS](prints/pfSense/Cliente_tplink_configurado.png)
+
+Figura 5 - Regra de firewall permitindo tráfego do protocolo RADIUS
 
 ![Regra firewall freeRADIUS](prints/pfSense/Regra_permissão_freeradius.png)
 
@@ -124,20 +134,18 @@ Nas configurações de autenticação da rede sem fio, foram definidos os seguin
 
 O endereço IP **192.168.1.1** corresponde à interface LAN do pfSense, onde está em execução o serviço FreeRADIUS.
 
-### Funcionamento da Autenticação
 
-Após a conclusão das configurações, a rede sem fio passou a exigir credenciais válidas para acesso.
+Figura 6 - Configurando IP no tplink
 
-O processo ocorre da seguinte forma:
+![Definição do endereço IP do tplink](prints/tplink/IP-tplink.png)
 
-1. O usuário tenta se conectar à rede **Rede-Lab-Teste**.
-2. O TP-Link solicita as credenciais de autenticação.
-3. As credenciais informadas são encaminhadas ao servidor FreeRADIUS no pfSense.
-4. O FreeRADIUS valida o usuário e a senha cadastrados.
-5. O servidor retorna uma resposta de autorização (**Access-Accept**) ou rejeição (**Access-Reject**).
-6. Com base na resposta recebida, o Access Point concede ou bloqueia o acesso do usuário à rede sem fio.
+Figura 7 - Servidor DHCP do tplink desabilitado
 
-Dessa forma, a autenticação dos usuários passa a ser centralizada no servidor FreeRADIUS, proporcionando maior controle e segurança no acesso à rede Wi-Fi.
+![Servidor DHCP do tplink desabilitado](prints/tplink/Servidor_DHCP_desabilitado_tplink.png)
+
+Figura 8 - Rede wifi configurada no tplink
+
+![Rede wifi configurada no tplink](prints/tplink/Rede_wifi_configurada.png)
 
 
 ### Hardware
@@ -155,17 +163,18 @@ O modo Bridge foi utilizado para que o pfSense operasse como um dispositivo de r
 
 A segunda interface foi associada à placa de rede USB Ethernet, sendo configurada como LAN, onde foi conectado o ponto de acesso TP-Link.
 
+Figura 8 - Configuração de rede no VirtualBox
+
 ![Configuração das placas de rede no virtualbox](prints/VirtualBox/Config_rede_pfSense_virtualbox.png)
+
+Figura 9 - tplinl wr849n
 
 ![tplink wr849n utilizado como AP](hardware/Roteador_TPlink-wr829n.jpeg)
 
+Figura 10 - Placa de rede usb conectada ao tplink
+
 ![Placa de rede usb conectada ao tplink](hardware/Placa_de_rede_usb.jpeg)
 
-
-### Software
-
-* pfSense
-* FreeRADIUS
 
 ## Testes
 

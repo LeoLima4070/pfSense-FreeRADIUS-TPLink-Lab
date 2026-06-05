@@ -167,7 +167,7 @@ Figura 8 - Configuração de rede no VirtualBox
 
 ![Configuração das placas de rede no virtualbox](prints/VirtualBox/Config_rede_pfSense_virtualbox.png)
 
-Figura 9 - tplinl wr849n
+Figura 9 - tplink WR829N
 
 ![tplink wr849n utilizado como AP](hardware/Roteador_TPlink-wr829n.jpeg)
 

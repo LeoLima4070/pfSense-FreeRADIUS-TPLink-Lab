@@ -38,17 +38,6 @@ Por fim, a interface WAN do pfSense fornece conectividade com a internet.
 
 ---
 
-## Fluxo de Autenticação
-
-1. O cliente tenta conectar-se à rede Wi-Fi.
-2. O Access Point encaminha a solicitação de autenticação.
-3. O FreeRADIUS recebe as credenciais.
-4. O servidor valida usuário e senha.
-5. O acesso é concedido ou negado.
-6. Se concedido o cliente recebe um IP distribuído pelo pfSense via DHCP
-
----
-
 ## Configurações
 
 ## Configuração do FreeRADIUS no pfSense

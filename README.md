@@ -178,6 +178,43 @@ Figura 10 - Placa de rede usb conectada ao tplink
 
 ## Testes
 
+Após a implementação da solução, foram realizados testes de autenticação utilizando os usuários user-teste1 e user-teste2, previamente cadastrados no servidor FreeRADIUS configurado no pfSense. Inicialmente, foi realizada a conexão do usuário user-teste1 por meio de um smartphone com sistema operacional Android. Em seguida, o usuário user-teste2 foi autenticado em um notebook com sistema operacional Windows. Ambos os testes foram concluídos com sucesso, comprovando o correto funcionamento da infraestrutura implementada e validando o processo de autenticação centralizada por meio do FreeRADIUS.
+
+Figura 11 - Conectando user-teste1 a rede wifi em um dispositivo android
+
+![Conectando user-teste1 a rede wifi em um dispositivo android](prints/Testes/Login_user-teste1_smartphone_android.jpeg)
+
+Figura 12 - user-teste1 conectado
+
+![user-teste1 conectado](prints/Testes/user-teste1_conectado_smartphone_android.jpeg)
+
+Figura 13 - Logs servidor freeRADIUS no pfSense user-teste1 autenticado
+
+![user-teste1 conectado freeRADIUS logs](prints/Testes/Logs_user-teste1_autenticado.png)
+
+Figura 14 - Logs no tplink do user-teste1 conectado
+
+![Logs no tplink do user-teste1 conectados](prints/Testes/Log_tplink_usuário_conectado.png)
+
+Figura 15 - Conectando user-teste2 a rede wifi em um dispositivo windows
+
+![Conectando user-teste2 a rede wifi em um dispositivo windows](prints/Testes/Login_user-teste2_notebook_windows.png)
+
+Figura 16 - user-teste2 conectado
+
+![user-teste2 conectado](prints/Testes/Usuário_conectado_windows.png)
+
+
+Figura 18 - Logs no tplink do user-teste2 conectado
+
+![Logs no tplink do user-teste2 conectado](prints/Testes/Logs_user-teste2_autenticado.png)
+
+
+Figura 18 - Logs no tplink do user-teste2 conectado
+
+![Logs no tplink do user-teste2 conectado](prints/Testes/Log_tplink_user-teste2_conectado.png)
+
+
 ## Resultados
 
 O ambiente foi configurado com sucesso, permitindo a autenticação centralizada de usuários em uma rede Wi-Fi através do protocolo WPA2-Enterprise.

@@ -66,6 +66,11 @@ Para validação do funcionamento da autenticação, foram criados os seguintes 
 
 Essas contas são utilizadas para autenticação dos dispositivos clientes conectados à rede sem fio.
 
+Figura 2 – Cadastro de usuários teste no servidor FreeRADIUS
+
+![Cadastro de usuários teste no servidor FreeRADIUS](prints/pfSense/Usuários_testes+freeradius.png)
+
+
 ### Configuração do Firewall
 
 Para permitir a comunicação entre o Access Point e o servidor RADIUS, foi criada uma regra de firewall na interface **LAN** do pfSense com as seguintes características:
@@ -87,19 +92,19 @@ A porta **1812/UDP** é utilizada pelo protocolo RADIUS para autenticação e su
 6. O Access Point concede ou bloqueia o acesso à rede de acordo com a resposta recebida.
 
 
-Figura 2 – Configuração de rede pfSense
+Figura 3 – Configuração de rede pfSense
 
 ![Configuração de rede pfSense](prints/pfSense/Config_rede_pfSense.png)
 
-Figura 3 - Configuração do servidor freeRADIUS
+Figura 4 - Configuração do servidor freeRADIUS
 
 ![Configuração servidor freeRADIUS](prints/pfSense/Servidor_freeradius_pfSense.png)
 
-Figura 4 - Configuração do tplink como cliente FreeRADIUS
+Figura 5 - Configuração do tplink como cliente FreeRADIUS
 
 ![Configuração cliente freeRADIUS](prints/pfSense/Cliente_tplink_configurado.png)
 
-Figura 5 - Regra de firewall permitindo tráfego do protocolo RADIUS
+Figura 6 - Regra de firewall permitindo tráfego do protocolo RADIUS
 
 ![Regra firewall freeRADIUS](prints/pfSense/Regra_permissão_freeradius.png)
 
@@ -135,15 +140,15 @@ Nas configurações de autenticação da rede sem fio, foram definidos os seguin
 O endereço IP **192.168.1.1** corresponde à interface LAN do pfSense, onde está em execução o serviço FreeRADIUS.
 
 
-Figura 6 - Configurando IP no tplink
+Figura 7 - Configurando IP no tplink
 
 ![Definição do endereço IP do tplink](prints/tplink/IP-tplink.png)
 
-Figura 7 - Servidor DHCP do tplink desabilitado
+Figura 8 - Servidor DHCP do tplink desabilitado
 
 ![Servidor DHCP do tplink desabilitado](prints/tplink/Servidor_DHCP_desabilitado_tplink.png)
 
-Figura 8 - Rede wifi configurada no tplink
+Figura 9 - Rede wifi configurada no tplink
 
 ![Rede wifi configurada no tplink](prints/tplink/Rede_wifi_configurada.png)
 
@@ -163,15 +168,15 @@ O modo Bridge foi utilizado para que o pfSense operasse como um dispositivo de r
 
 A segunda interface foi associada à placa de rede USB Ethernet, sendo configurada como LAN, onde foi conectado o ponto de acesso TP-Link.
 
-Figura 8 - Configuração de rede no VirtualBox
+Figura 10 - Configuração de rede no VirtualBox
 
 ![Configuração das placas de rede no virtualbox](prints/VirtualBox/Config_rede_pfSense_virtualbox.png)
 
-Figura 9 - tplink WR829N
+Figura 11 - tplink WR829N
 
 ![tplink wr849n utilizado como AP](hardware/Roteador_TPlink-wr829n.jpeg)
 
-Figura 10 - Placa de rede usb conectada ao tplink
+Figura 12 - Placa de rede usb conectada ao tplink
 
 ![Placa de rede usb conectada ao tplink](hardware/Placa_de_rede_usb.jpeg)
 
@@ -180,37 +185,37 @@ Figura 10 - Placa de rede usb conectada ao tplink
 
 Após a implementação da solução, foram realizados testes de autenticação utilizando os usuários user-teste1 e user-teste2, previamente cadastrados no servidor FreeRADIUS configurado no pfSense. Inicialmente, foi realizada a conexão do usuário user-teste1 por meio de um smartphone com sistema operacional Android. Em seguida, o usuário user-teste2 foi autenticado em um notebook com sistema operacional Windows. Ambos os testes foram concluídos com sucesso, comprovando o correto funcionamento da infraestrutura implementada e validando o processo de autenticação centralizada por meio do FreeRADIUS.
 
-Figura 11 - Conectando user-teste1 a rede wifi em um dispositivo android
+Figura 13 - Conectando user-teste1 a rede wifi em um dispositivo android
 
 ![Conectando user-teste1 a rede wifi em um dispositivo android](prints/Testes/Login_user-teste1_smartphone_android.jpeg)
 
-Figura 12 - user-teste1 conectado
+Figura 14 - user-teste1 conectado
 
 ![user-teste1 conectado](prints/Testes/user-teste1_conectado_smartphone_android.jpeg)
 
-Figura 13 - Logs servidor freeRADIUS no pfSense user-teste1 autenticado
+Figura 15 - Logs servidor freeRADIUS no pfSense user-teste1 autenticado
 
 ![user-teste1 conectado freeRADIUS logs](prints/Testes/Logs_user-teste1_autenticado.png)
 
-Figura 14 - Logs no tplink do user-teste1 conectado
+Figura 16 - Logs no tplink do user-teste1 conectado
 
 ![Logs no tplink do user-teste1 conectados](prints/Testes/Log_tplink_usuário_conectado.png)
 
-Figura 15 - Conectando user-teste2 a rede wifi em um dispositivo windows
+Figura 17 - Conectando user-teste2 a rede wifi em um dispositivo windows
 
 ![Conectando user-teste2 a rede wifi em um dispositivo windows](prints/Testes/Login_user-teste2_notebook_windows.png)
 
-Figura 16 - user-teste2 conectado
+Figura 18 - user-teste2 conectado
 
 ![user-teste2 conectado](prints/Testes/Usuário_conectado_windows.png)
 
 
-Figura 17 - Logs no tplink do user-teste2 conectado
+Figura 19 - Logs no tplink do user-teste2 conectado
 
 ![Logs no tplink do user-teste2 conectado](prints/Testes/Logs_user-teste2_autenticado.png)
 
 
-Figura 18 - Logs no tplink do user-teste2 conectado
+Figura 20 - Logs no tplink do user-teste2 conectado
 
 ![Logs no tplink do user-teste2 conectado](prints/Testes/Log_tplink_user-teste2_conectado.png)
 

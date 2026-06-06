@@ -205,7 +205,7 @@ Figura 16 - user-teste2 conectado
 ![user-teste2 conectado](prints/Testes/Usuário_conectado_windows.png)
 
 
-Figura 18 - Logs no tplink do user-teste2 conectado
+Figura 17 - Logs no tplink do user-teste2 conectado
 
 ![Logs no tplink do user-teste2 conectado](prints/Testes/Logs_user-teste2_autenticado.png)
 
